@@ -24,8 +24,7 @@ const gif = document.querySelector("#songinfo img")
 const musicprogress = document.querySelector("#bottom input")
 const songname = document.querySelector("#songinfo p")
 const songItemPlay = Array.from(document.querySelectorAll(".songItemPlay"))
-// console.log(songDuration);
-// console.log(currentsong);
+const volume = document.querySelector("#vlm")
 
 
 //displaying the duration of the songs in the page
@@ -87,6 +86,8 @@ previousbutton.addEventListener("click", function () {
             songIndex--
             currentsong.src = songs[songIndex].filePath  //changing the song
             songname.innerHTML = songs[songIndex].songName //changing the song name
+
+            currentsong.volume = volume.value //setting the current volume
         }
 
         else { //while playing, pressing the previous button
@@ -100,6 +101,8 @@ previousbutton.addEventListener("click", function () {
 
             songItemPlay[songIndex].classList.remove("fa-play-circle") //adding and removing play pause button from the list
             songItemPlay[songIndex].classList.add("fa-pause-circle")
+
+            currentsong.volume = volume.value //setting the current volume
         }
     }
 })
@@ -114,6 +117,8 @@ nextbutton.addEventListener("click", function () {
             songIndex++
             currentsong.src = songs[songIndex].filePath  //changing the song
             songname.innerHTML = songs[songIndex].songName //changing the song name
+
+            currentsong.volume = volume.value //setting the current volume
         }
 
         else { //while playing, pressing the next button
@@ -127,6 +132,7 @@ nextbutton.addEventListener("click", function () {
 
             songItemPlay[songIndex].classList.remove("fa-play-circle") //adding and removing play pause button from the list
             songItemPlay[songIndex].classList.add("fa-pause-circle")
+            currentsong.volume = volume.value //setting the current volume
         }
     }
 
@@ -155,6 +161,8 @@ currentsong.addEventListener("timeupdate", () => {
         songname.innerHTML = songs[songIndex].songName //changing the song name
         currentsong.play()
 
+        currentsong.volume = volume.value //setting the current volume
+
         songItemPlay[songIndex].classList.remove("fa-play-circle") //adding and removing play pause button from the list
         songItemPlay[songIndex].classList.add("fa-pause-circle")
     }
@@ -169,7 +177,6 @@ musicprogress.addEventListener("input", () => {
 songItemPlay.forEach(function (element) {
 
     element.addEventListener('click', (e) => {
-        console.log(e.target);
 
         if (e.target.classList.contains('fa-pause-circle')) { //means that can pause the current song
 
@@ -210,6 +217,7 @@ songItemPlay.forEach(function (element) {
             songIndex = parseInt(e.target.id)
             currentsong.src = songs[songIndex].filePath  //changing the song
             songname.innerHTML = songs[songIndex].songName //changing the song name
+            currentsong.volume = volume.value //setting the current volume
 
             currentsong.play()
             gif.style.opacity = "1"
@@ -225,6 +233,11 @@ function makeallpause() {  //pauses all the songs in the list
         element.classList.add("fa-play-circle")
     })
 }
+
+//volume control
+volume.addEventListener("input", function () {
+    currentsong.volume = volume.value
+})
 
 
 
