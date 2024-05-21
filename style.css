@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    background: antiquewhite;
+}
+
+nav{
+    height: 65px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:first-child{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:first-child img{
+    width: 40px;
+}
+
+nav ul li{
+    padding: 10px;
+}
+
+.container{
+    width: 90vw;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+}
+
+#soundListContainer{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#soundListContainer .songList{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    margin: 7px 0;
+    padding: 10px 30px;
+}
+
+#soundListContainer .songList .songItemPlay{
+    cursor: pointer;
+}
+
+#soundListContainer .songList img{
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+#soundListContainer .songList span:last-child{
+    margin-top: 8px;
+}
+
+#bottom{
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px;
+}
+
+#bottom input{
+    width: 80%;
+    cursor: pointer;
+}
+
+#bottom #icons i{
+    cursor: pointer;
+}
+
+#bottom #songinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#bottom #songinfo img{
+    width: 30px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .container{
+        background: url("bg.jpg");
+        background-size: 100% 100%;
+    }
+
+    .container h1{
+        text-align: start;
+    }
+
+    #soundListContainer .songList{
+        flex-direction: row;
+        width: 48vw;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    #soundListContainer .songList img{
+        margin-bottom: 0;
+    }
+
+    #soundListContainer .songList span:last-child{
+        margin-top: 0;
+    }
+}

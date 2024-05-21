@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify Web</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><img src="logo.png" alt=""><span style="padding-left: 8px; font-weight: bold; font-size: 20px;">Spotify</span></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Best of NCS - No Copyright Sounds</h1>
+
+        <div id="soundListContainer">
+
+            <div class="songList">
+                <img src="./covers/1.jpg" alt="">
+                <span>Warriyo - Mortals </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="0" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/2.jpg" alt="" style="height: 40px;">
+                <span>Cielo - Huma-Huma </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="1" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/3.jpg" alt="">
+                <span>DEAF KEV Invincible </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="2" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/4.jpg" alt="" style="height: 40px;">
+                <span>Different Heaven & EH!DE - My Heart </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="3" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/5.jpg" alt="">
+                <span>Janji Heroes Tonight feat Johnning </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="4" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/6.jpg" alt="">
+                <span>Lost Sky - Fearless </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="5" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/7.jpg" alt="">
+                <span>Lost Sky - Dreams </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="6" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/8.jpg" alt="" style="height: 40px;">
+                <span>Lost Sky - Where We Started </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="7" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/9.jpg" alt="">
+                <span>Robin Hustin x TobiMorrow - Light It Up </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="8" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+            <div class="songList">
+                <img src="./covers/10.jpg" alt="">
+                <span>Diviners - Savannah </span>
+                <span class="songDuration"><span style="margin-right: 5px;"></span><i id="9" class="far songItemPlay fa-play-circle"></i></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="bottom">
+
+        <input type="range" id="musicprogress" min="0" value="0" max="100">
+
+        <div id="icons" style="padding-top: 20px;">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+        </div>
+
+        <div id="songinfo">
+            <img src="playing.gif" alt="">
+            <p>Warriyo - Mortals [NCS Release]</p>
+        </div>
+
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/7455c2a020.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
